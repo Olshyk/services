@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   font-family: "TT Lakes", sans-serif;
+  background-color: #f8f8f8;
 }
 .visually-hidden {
   position: absolute;
@@ -48,6 +49,7 @@ body {
 .header {
   padding-top: 18.59px;
   padding-bottom: 12px;
+  background-color: #fff;
 }
 .navigation {
   display: flex;
@@ -173,7 +175,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.6px;
   color: #1b1c21;
-  margin: 24px 0 24px 0;
+  margin: 24px 0 24px 5%;
 }
 .main__title::before {
   content: "";
@@ -184,6 +186,9 @@ body {
   position: absolute;
   left: 0;
   background-color: #41f6d7;
+}
+.main__tabs {
+  margin-left: 5%;
 }
 .tabs__list {
   display: flex;
@@ -219,6 +224,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  margin: 0 auto;
+  width: 90%;
 }
 .content {
   display: none;
@@ -240,10 +247,11 @@ body {
   overflow: hidden;
   padding-bottom: 10px;
 }
-.content__link {
+.content__wrap--full {
+  height: auto;
+}
+.link {
   position: relative;
-  display: block;
-  text-decoration: none;
   padding-top: 10px;
   padding-left: 32px;
   font-size: 16px;
@@ -251,18 +259,24 @@ body {
   font-weight: 500;
   letter-spacing: -0.2px;
   color: #1b1c21;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
-.content__link:hover,
-.content__link:focus {
+.link:hover,
+.link:focus {
   color: #7e7e82;
 }
-.content__link::before {
+.link::before {
   content: url("../img/arrow-icon.svg");
   display: block;
   width: 75.5px;
   height: 10.3px;
   position: absolute;
-  left: 16px;
+  left: -26px;
+}
+.link--hide::before {
+  transform: scaleY(-1) translateY(-12px);
 }
 .main__image {
   margin: 0 -5.5%;
@@ -272,8 +286,9 @@ body {
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: 93.75%;
+  .container,
+  .main__wrap {
+    width: 93.76%;
   }
   .navigation__list--user {
     display: flex;
@@ -292,6 +307,10 @@ body {
   .navigation__logo {
     margin-left: 26px;
   }
+  .main__title,
+  .main__tabs {
+    margin-left: 3.12%;
+  }
   .content {
     line-height: 20px;
   }
@@ -306,14 +325,13 @@ body {
   }
 }
 @media (min-width: 1120px) {
-  body {
-    background-color: #f8f8f8;
-  }
-  .container {
-    width: 94.3%;
+  .container,
+  .main__wrap {
+    width: 94.4%;
   }
   .header {
     padding: 0;
+    background-color: #f8f8f8;
   }
   .button--menu,
   .navigation__logo,
@@ -332,11 +350,12 @@ body {
   .main {
     border: none;
   }
-  .main .container {
+  .main__title {
     margin-top: -40px;
   }
-  .main__title {
-    margin-top: 0;
+  .main__title,
+  .main__tabs {
+    margin-left: 2.8%;
   }
   .tabs__list {
     flex-wrap: wrap;
