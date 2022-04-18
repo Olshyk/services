@@ -42,14 +42,14 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
 .header {
   padding-top: 18.59px;
-  padding-bottom: 12px;
+  padding-bottom: 17.59px;
   background-color: #fff;
+}
+.header__container {
+  width: 90%;
+  margin: 0 auto;
 }
 .navigation {
   display: flex;
@@ -66,7 +66,7 @@ body {
   border: 1px solid #ff3e79;
   background-color: #ff3e79;
   cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.3s ease;
 }
 .button:hover,
 .button:focus {
@@ -156,8 +156,8 @@ body {
   text-decoration: none;
   font-size: 16px;
   line-height: 24px;
-  text-align: right;
   letter-spacing: -0.2px;
+  text-align: right;
   color: #1b1c21;
   font-weight: 500;
   padding: 0 9px 0 16px;
@@ -196,6 +196,9 @@ body {
   list-style-type: none;
   overflow: auto;
   margin: 0;
+}
+.tabs__list::-webkit-scrollbar {
+  display: none;
 }
 .tabs__title {
   white-space: nowrap;
@@ -243,7 +246,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-height: 110px;
+  height: 110px;
   overflow: hidden;
   padding-bottom: 10px;
 }
@@ -286,7 +289,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .container,
+  .header__container,
   .main__wrap {
     width: 93.76%;
   }
@@ -325,7 +328,7 @@ body {
   }
 }
 @media (min-width: 1120px) {
-  .container,
+  .header__container,
   .main__wrap {
     width: 94.4%;
   }
