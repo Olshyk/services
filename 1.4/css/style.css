@@ -109,11 +109,13 @@ body {
   margin-top: 3.7vh;
 }
 .sidebar__nav-link {
+  display: block;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   font-weight: 500;
   color: #1b1c21;
+  text-decoration: none;
   margin-bottom: 3.3vh;
 }
 .sidebar__nav-link--active,
